@@ -1,0 +1,14 @@
+version: 2
+
+models:
+
+    - name: stg_payments
+      description: Staged payment data.
+      columns: 
+         - name: payment_id
+           description: The primary key for customers.
+           tests:
+             - unique
+             - not_null 
+         - name: payment_method
+           description: "{{doc('payment_method')}}"
